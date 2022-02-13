@@ -11,3 +11,401 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.shop--nav {
+  margin-top: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.shop--nav--link {
+  background: none;
+  outline: none;
+  border: 0;
+  color: #8a8a8a;
+  margin: 0 1.2rem;
+  padding: 0 1.2rem 0.7rem 1.2rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .shop--nav--link {
+    margin: 0.6rem 1.2rem;
+  }
+}
+
+.shop--nav--link:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.shop--nav__active {
+  color: #000000;
+  border-bottom: 2px solid #E82929;
+}
+
+.shop--cars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1199px) {
+  .shop--cars {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.shop--cars .car {
+  width: 22%;
+  padding: 1.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 1px 1px 3px #ccc;
+          box-shadow: 1px 1px 3px #ccc;
+  position: relative;
+  margin: 0 1rem;
+}
+
+@media (max-width: 1199px) {
+  .shop .car {
+    width: 45%;
+    margin: 1rem 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .shop .car {
+    width: 90%;
+  }
+}
+
+.shop .car:hover {
+  -webkit-box-shadow: 3px 3px 3px #ccc;
+          box-shadow: 3px 3px 3px #ccc;
+}
+
+.shop .car__hidden {
+  display: none;
+}
+
+.shop .car--badge {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  background-color: #962AFA;
+  color: #ffffff;
+  padding: .5rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.shop .car--img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.shop .car--specs {
+  color: #8a8a8a;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: .6rem;
+}
+
+.shop .car--name {
+  text-align: center;
+  margin-top: .6rem;
+  font-weight: 700;
+}
+
+.shop .car--config {
+  background: none;
+  outline: none;
+  border: 0;
+  color: #548BFB;
+  margin-top: .5rem;
+}
+
+.shop .car--info {
+  margin-top: 1.3rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.shop .car--info li {
+  color: #8a8a8a;
+  margin: 1rem 0 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop .car--info li::before {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: "";
+  width: 22px;
+  height: 16px;
+  margin-right: 0.5rem;
+  background-image: url('../public/images/Path.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shop .car--bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.shop .car--price {
+  color: #8a8a8a;
+  font-size: 0.8rem;
+}
+
+.shop .car--price span {
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+.shop .car--btn button {
+  background-color: #FEE9E9;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+  outline: none;
+  border: 0;
+  color: #E82929;
+  font-size: 0.8rem;
+}
+
+.config {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  padding: 2rem;
+}
+
+.config__hidden {
+  display: none;
+}
+
+.config--window {
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .config--window {
+    height: calc(100vh - 2rem);
+    overflow-y: scroll;
+  }
+}
+
+.config--close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 35px !important;
+  height: 35px !important;
+  padding: 1.2rem;
+  background-color: #212121;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .config--close {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.config--left, .config--right {
+  padding: 2rem;
+}
+
+.config--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F1F1F5;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.config--img {
+  position: relative;
+}
+
+.config--badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #962AFA;
+  color: #ffffff;
+  padding: .3rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: .6rem;
+}
+
+.config--specs {
+  margin-top: 1rem;
+  color: #8a8a8a;
+}
+
+.config--price {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #212121;
+  border-radius: 10px;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  font-size: 0.7rem;
+}
+
+.config--price--num {
+  font-size: 1.5rem;
+}
+
+.config--row {
+  margin: 0.5rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.config--row:last-child {
+  border: 0;
+}
+
+.config--row span {
+  text-align: right;
+}
+
+.config--label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
+}
+
+.config--label p {
+  margin: 0 0 0 1rem;
+  font-size: 1rem;
+}
+
+.config input[type="checkbox"]:checked + div {
+  background-color: #000000;
+}
+
+.config--checkmark {
+  width: 15px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  border: 1px solid #000000;
+}
