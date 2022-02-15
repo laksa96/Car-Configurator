@@ -1,8 +1,6 @@
 # Car Configurator in React
 
-* In real project data would be pulled from API
-
-Application pulls data from a file or localStorage if it exists.
+Application uses fetch to get data from "API or gets data from localStorage if it exists.
 
 ![Car Configurator Screenshot](/public/images/cars-1.png?raw=true "Car Configurator Screenshot")
 

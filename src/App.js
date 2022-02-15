@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react'
-import carsData from './carsData'
 import Car from './components/Car'
 import FilterButton from './components/FilterButton'
 import Configurator from './components/Configurator'
 
 const App = () => {
     // State for holding all cars data
-    const [cars, setCars] = useState(JSON.parse(localStorage.getItem('carsData')) || carsData)
+    const [cars, setCars] = useState(JSON.parse(localStorage.getItem('carsData')) || [])
     // State for selected selectedCategory of cars
     const [selectedCategory, setSelectedCategory] = useState('All')
     // State for holding cars from selected category
@@ -58,6 +57,15 @@ const App = () => {
         }))
     }
 
+
+    // Fetch data from "API" if there is no local storage set
+    useEffect(() => {
+        if (!localStorage.getItem('carsData')) {
+            fetch('http://localhost:3000/cars.json')
+            .then(res => res.json())
+            .then(data => setCars(data))
+        }
+    }, [])
     // Effect for watching selectedCar changes and updating all cars state
     useEffect(() => {
         if (selectedCar) {
